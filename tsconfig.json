@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "lib": ["esnext"],
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "noEmitOnError": true,
+    "noImplicitThis": true,
+    "strictBindCallApply": true,
+    "alwaysStrict": true,
+    "strictFunctionTypes": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "client"]
+}

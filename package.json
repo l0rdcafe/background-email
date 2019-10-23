@@ -1,0 +1,43 @@
+{
+  "name": "background-email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/init.ts",
+    "start": "node dist/init.js",
+    "postinstall": "tsc",
+    "heroku-postbuild": "cd client && npm i && npm run build",
+    "worker": "node dist/worker/worker.js"
+  },
+  "keywords": [],
+  "author": "Ismail Arafa <me@l0rdcafe.com> (http://www.l0rdcafe.com)",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.1",
+    "knex": "^0.19.5",
+    "morgan": "^1.9.1",
+    "node-resque": "^5.5.7",
+    "nodemailer": "^6.3.1",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/cors": "^2.8.6",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.1",
+    "@types/helmet": "0.0.44",
+    "@types/morgan": "^1.7.37",
+    "@types/node": "^12.7.9",
+    "@types/node-resque": "^5.4.1",
+    "@types/nodemailer": "^6.2.1",
+    "nodemon": "^1.19.3",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  }
+}

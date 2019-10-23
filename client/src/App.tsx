@@ -18,7 +18,7 @@ class App extends React.Component<{}, State> {
     try {
       this.setState((prevState: State) => ({ ...prevState, loading: true }));
       const { email, password } = this.state;
-      const res = await fetch("http://localhost:5000/login", {
+      const res = await fetch("/login", {
         headers: { "Content-Type": "application/json" },
         method: "POST",
         body: JSON.stringify({ email, password })

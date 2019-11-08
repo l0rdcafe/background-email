@@ -38,9 +38,10 @@ class App extends React.Component<{}, State> {
     const { email, password, sent, loading, error } = this.state;
     return (
       <div className="container mt-4 w-50">
-        <h4 className="text-center text-monospace">Login/Signup with your email + password to receive an email sent by a background worker ;)</h4>
         {loading && <h3>Loading...</h3>}
-          {!loading && !sent && (
+        {!loading && !sent && [
+          <h4 className="text-center text-monospace">Login/Signup with your email + password to receive an email sent by a background worker ;)</h4>,
+          (
           <form>
             <div className="form-group">
               <label htmlFor="exampleInputEmail1">Email address</label>
@@ -53,7 +54,8 @@ class App extends React.Component<{}, State> {
             </div>
             <button type="submit" onClick={this.handleSubmit} className="btn btn-primary">Submit</button>
           </form>
-        )}
+          )]
+        }
         {!loading && error && <h3>{error}</h3>}
         {!loading && sent && <h2>A confirmation email will be sent shortly to: {email}</h2>}
       </div>
